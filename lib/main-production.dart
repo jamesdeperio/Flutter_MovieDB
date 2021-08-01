@@ -3,11 +3,13 @@ import 'package:flutter_moviedbapp/application.dart';
 import 'package:flutter_moviedbapp/core/api/APIService.dart';
 
 import 'flavors.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart' as DotEnv;
 
-void main() {
+Future main() async {
+  var env = await DotEnv.load(fileName: "config.env");
   F.appFlavor = Flavor.PRODUCTION;
-  APIService.baseUrl ='https://api.themoviedb.org/3';
-  APIService.apiKey = 'api_key=b0fbe003fb2b4f037917ba2e46d27827';
+  APIService.baseUrl = env['BASE_URL_${Flavor.PRODUCTION}'];
+  APIService.apiKey = 'api_key=${env['API_KEY_${Flavor.PRODUCTION}']}';
 
   runApp(MovieDBApp());
 }

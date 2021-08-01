@@ -44,6 +44,8 @@ dependencies:
 
   flutter_flavorizr: ^2.0.0
 
+  flutter_dotenv: ^4.0.0-nullsafety.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -71,6 +73,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/images/
+    - config.env
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
