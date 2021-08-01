@@ -42,6 +42,8 @@ dependencies:
 
   json_annotation: ^4.0.0
 
+  flutter_flavorizr: ^2.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -102,3 +104,31 @@ flutter:
         - asset: assets/fonts/Muli-Bold.ttf
         - asset: assets/fonts/Muli-Regular.ttf
         - asset: assets/fonts/Muli-SemiBold.ttf
+
+
+  # BUILD VARIANTS
+flavorizr:
+    app:
+      android:
+        flavorDimensions: "flavor-type"
+      ios:
+
+    flavors:
+      production:
+        app:
+          name: "TheMovieDB"
+
+        android:
+          applicationId: "github.jamesdeperio.flutter_moviedbapp"
+
+        ios:
+          bundleId: "github.jamesdeperio.flutter_moviedbapp"
+
+      staging:
+        app:
+          name: "TheMovieDB-Staging"
+
+        android:
+          applicationId: "github.jamesdeperio.flutter_moviedbapp"
+        ios:
+          bundleId: "github.jamesdeperio.flutter_moviedbapp"

@@ -5,12 +5,11 @@ import 'package:flutter_moviedbapp/core/model/movie/movie.dart';
 import 'package:flutter_moviedbapp/core/model/movie/movie_detail.dart';
 import 'package:flutter_moviedbapp/core/model/movie/movie_image.dart';
 import 'package:flutter_moviedbapp/core/model/person/person.dart';
-
+import 'package:flutter_moviedbapp/flavors.dart';
 class APIService {
   final Dio _dio = Dio();
-
-  final String baseUrl = 'https://api.themoviedb.org/3';
-  final String apiKey = 'api_key=b0fbe003fb2b4f037917ba2e46d27827';
+  static String? baseUrl;
+  static String? apiKey;
 
   Future<List<Movie>> getNowPlayingMovie() async {
     try {
