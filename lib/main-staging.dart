@@ -6,10 +6,10 @@ import 'flavors.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart' as DotEnv;
 
 Future main() async {
-  var env = await DotEnv.load(fileName: "config.env");
+  await DotEnv.load(fileName: ".env");
   F.appFlavor = Flavor.STAGING;
-  APIService.baseUrl = env['BASE_URL_${Flavor.STAGING}'];
-  APIService.apiKey = 'api_key=${env['API_KEY_${Flavor.STAGING}']}';
+  APIService.baseUrl = DotEnv.env['BASE_URL_STAGING'];
+  APIService.apiKey = 'api_key=${DotEnv.env['API_KEY_STAGING']}';
 
   runApp(MovieDBApp());
 }
