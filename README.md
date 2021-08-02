@@ -4,10 +4,10 @@ A new Flutter application.
 
 ## Getting Started
 Flutter (Channel stable, 2.2.3, on Mac OS X 10.14.5 18F132 darwin-x64, locale en-PH)
-    • Flutter version 2.2.3
-    • Framework revision f4abaa0735
-    • Engine revision 241c87ad80
-    • Dart version 2.13.4
+- Flutter version 2.2.3
+- Framework revision f4abaa0735
+- Engine revision 241c87ad80
+- Dart version 2.13.4
 
 To Run:
 ```
